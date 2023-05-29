@@ -1,6 +1,5 @@
 // api key = 5e76dd14e71e926bca8d06afe98954bf
 const apiKey = "5e76dd14e71e926bca8d06afe98954bf";
-// city name with api key
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
@@ -10,8 +9,10 @@ console.log(apiKey);
 // check weather
 const checkWeather = async (city) => {
   try {
+    // fetch the api data
     const res = await fetch(`${apiUrl}${city}&units=metric&appid=${apiKey}`);
     const data = await res.json();
+    // if the city name is not found
     if (data.name == undefined) {
       alert("Please enter a city name");
       // remove the search box data
@@ -19,10 +20,10 @@ const checkWeather = async (city) => {
     } else {
       document.querySelector(".city").innerHTML = data.name;
     }
-
     document.querySelector(".temp").innerHTML = `${Math.round(
       data.main.temp
     )}°C`;
+
     document.querySelector(".humidity").innerHTML = `${data.main.humidity}%`;
     document.querySelector(".wind").innerHTML = `${data.wind.speed}km/h`;
     // show the weather icon according to the weather condition
@@ -47,18 +48,15 @@ const checkWeather = async (city) => {
     }
     document.querySelector(".weather").style.display = "block";
 
-    
-
     // console.log(data);
 
     showWeather(data);
-   
   } catch (error) {
     console.log(error);
   }
-
 };
 
+// show weather
 searchBtn.addEventListener("click", () => {
   const cityName = searchBox.value;
   checkWeather(cityName);

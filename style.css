@@ -1,12 +1,15 @@
+/* full page inspection */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+/* body bg color */
 body {
   background: #222;
 }
+/* card style  */
 .card {
   width: 90%;
   max-width: 470px;
@@ -17,13 +20,14 @@ body {
   padding: 40px 35px;
   text-align: center;
 }
-
+/* search field style  */
 .search {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+/* search bar style  */
 .search input {
   border-radius: 5px;
   border: none;
@@ -35,7 +39,7 @@ body {
   color: #222;
   margin-right: 16px;
 }
-
+/* search button style  */
 .search button {
   border: none;
   outline: none;
@@ -47,20 +51,23 @@ body {
   width: 20px;
   cursor: pointer;
 }
+/* weather icon style  */
 .weather-icon {
   width: 170px;
   margin-top: 30px;
 }
+/* temperature style  */
 .temp {
   font-size: 80px;
   font-weight: 500;
 }
+/* city name style  */
 .city {
   font-size: 45px;
   font-weight: 400;
   margin-top: -10px;
 }
-
+/* weather details style  */
 .details {
   margin-top: 50px;
   display: flex;
@@ -84,6 +91,6 @@ body {
   font-size: 29px;
   margin-top: -6px;
 }
-.weather{
+.weather {
   display: none;
 }
