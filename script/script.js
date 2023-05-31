@@ -20,6 +20,9 @@ const checkWeather = async (city) => {
     } else {
       document.querySelector(".city").innerHTML = data.name;
     }
+    // weather condition
+    document.querySelector(".weather-condition").innerHTML =
+      data.weather[0].main;
     document.querySelector(".temp").innerHTML = `${Math.round(
       data.main.temp
     )}°C`;
@@ -47,6 +50,7 @@ const checkWeather = async (city) => {
         weatherIcon.src = "images/mist.png";
     }
     document.querySelector(".weather").style.display = "block";
+    document.querySelector(".weather-condition").style.display = "block";
 
     // console.log(data);
 

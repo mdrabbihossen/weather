@@ -91,6 +91,7 @@ body {
   font-size: 29px;
   margin-top: -6px;
 }
-.weather {
+.weather,
+.weather-condition {
   display: none;
 }
